@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>evncrl</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="bg-gray-50 text-gray-800">
@@ -40,12 +41,18 @@
     <div class="grid md:grid-cols-3 gap-6">
       <!-- Project Card 1 -->
       <div class="bg-white shadow rounded overflow-hidden">
-        <img src="https://www.youtube.com/watch?v=z1b1ujFdaVo" alt="Project 1" class="w-full">
         <div class="p-4">
           <h4 class="text-xl font-bold">Rotoscope</h4>
-          <p class="text-sm text-gray-600 mt-2">Created in After Effects using motion typography and transitions.</p>
+          <p class="text-sm text-gray-600 mt-2">
+            Created in After Effects using motion typography and transitions.
+          </p>
+          <div class="mt-4 w-full aspect-video">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/z1b1ujFdaVo" title="Rotoscope"
+              frameborder="0" allowfullscreen></iframe>
+          </div>
         </div>
       </div>
+
 
       <!-- Project Card 2 -->
       <div class="bg-white shadow rounded overflow-hidden">
