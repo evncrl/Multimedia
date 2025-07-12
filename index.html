@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>evncrl</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="bg-gray-50 text-gray-800">
@@ -39,16 +40,21 @@
 
     <div class="grid md:grid-cols-3 gap-6">
       <!-- Project Card 1 -->
-      <div class="bg-white shadow rounded overflow-hidden">
-        <img src="https://via.placeholder.com/600x340.png?text=AE+Intro+Video" alt="Project 1" class="w-full">
+      <div class="bg-white shadow rounded overflow-hidden fade-in" style="animation-delay: 0.2s;">
         <div class="p-4">
           <h4 class="text-xl font-bold">Rotoscope</h4>
-          <p class="text-sm text-gray-600 mt-2">Created in After Effects using motion typography and transitions.</p>
+          <p class="text-sm text-gray-600 mt-2">
+            Created in After Effects using motion typography and transitions.
+          </p>
+          <div class="mt-4 w-full aspect-video">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/z1b1ujFdaVo" title="Rotoscope"
+              frameborder="0" allowfullscreen></iframe>
+          </div>
         </div>
       </div>
 
       <!-- Project Card 2 -->
-      <div class="bg-white shadow rounded overflow-hidden">
+      <div class="bg-white shadow rounded overflow-hidden fade-in" style="animation-delay: 0.4s;">
         <img src="https://via.placeholder.com/600x340.png?text=Blender+Render" alt="Project 2" class="w-full">
         <div class="p-4">
           <h4 class="text-xl font-bold">Blender</h4>
@@ -61,8 +67,10 @@
   <!-- ABOUT -->
   <section id="about" class="max-w-3xl mx-auto py-16 px-6">
     <h3 class="text-2xl font-semibold mb-4">About Me</h3>
-    <p>I’m a motion designer passionate about creating engaging visuals using Adobe After Effects and Blender. I use
-      this blog to share my personal projects, behind-the-scenes workflows, and creative experiments.</p>
+    <p>I’m a second-year BSIT student at TUP-T. I use this blog to showcase my personal motion design projects,
+      behind-the-scenes workflows,
+      and creative experiments made with Adobe After Effects and Blender.
+    </p>
   </section>
 
   <!-- CONTACT -->

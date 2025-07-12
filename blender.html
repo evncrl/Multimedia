@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>evncrl</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl font-bold text-indigo-600">EvnCrl</h1>
+      <nav class="space-x-4">
+        <a href="index.html" class="text-gray-700 hover:text-indigo-600">Projects</a>
+        <a href="after-effects.html" class="text-indigo-600 font-semibold">After Effects</a>
+        <a href="blender.html" class="text-gray-700 hover:text-indigo-600">Blender</a>
+        <a href="index.html#about" class="text-gray-700 hover:text-indigo-600">About</a>
+        <a href="index.html#contact" class="text-gray-700 hover:text-indigo-600">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="bg-indigo-100 py-20 text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-4xl font-bold mb-4">Multimedia Projects</h2>
+      <p class="text-lg">Procedural solar system visualization created in Blender using Python scripting — explore my latest creations</p>
+      <p class="text-lg">By Carl Evan T. Piad</p>
+    </div>
+  </section>
+
+  <!-- Blender Projects -->
+  <section class="max-w-7xl mx-auto p-6">
+    <h2 class="text-3xl font-bold mb-6">Blender Projects</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-white shadow rounded overflow-hidden">
+        <img src="https://via.placeholder.com/600x340?text=AE+Video" alt="AE project" class="w-full">
+        <div class="p-4">
+          <h4 class="text-xl font-bold">Blender Scripting</h4>
+          <p class="text-sm text-gray-600 mt-2">Python-scripted animation in Blender with stylized effects.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Planet Age Calculator -->
+<section class="bg-indigo-50 py-12 px-6">
+  <div class="max-w-5xl mx-auto">
+    <h3 class="text-3xl font-bold text-center mb-6">🪐 How Old Are You on Other Planets?</h3>
+    <div class="text-center mb-8">
+      <input type="number" id="earthAge" placeholder="Enter your Earth age"
+             class="px-4 py-2 rounded shadow border focus:outline-none focus:ring mb-4" />
+
+      <button onclick="calculatePlanetAges()" class="bg-indigo-600 text-white px-6 py-2 rounded hover:bg-indigo-700 transition">
+        Calculate
+      </button>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6" id="planet-sections">
+      <!-- Each Planet Card -->
+      <div class="bg-white p-6 rounded shadow text-center">
+        <h4 class="text-xl font-bold mb-2">Mercury</h4>
+        <p id="mercury-age" class="text-indigo-600 font-semibold text-lg">—</p>
+        <p class="text-sm text-gray-600">Mercury has the shortest year — only 88 Earth days. You’d celebrate more birthdays here!</p>
+      </div>
+
+      <div class="bg-white p-6 rounded shadow text-center">
+        <h4 class="text-xl font-bold mb-2">Venus</h4>
+        <p id="venus-age" class="text-indigo-600 font-semibold text-lg">—</p>
+        <p class="text-sm text-gray-600">A year on Venus is about 225 Earth days. Still faster than Earth, but not too quick!</p>
+      </div>
+
+      <div class="bg-white p-6 rounded shadow text-center">
+        <h4 class="text-xl font-bold mb-2">Earth</h4>
+        <p id="earth-age" class="text-indigo-600 font-semibold text-lg">—</p>
+        <p class="text-sm text-gray-600">Well... you're already used to this one. 365 days = 1 year.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded shadow text-center">
+        <h4 class="text-xl font-bold mb-2">Mars</h4>
+        <p id="mars-age" class="text-indigo-600 font-semibold text-lg">—</p>
+        <p class="text-sm text-gray-600">Mars takes almost 2 Earth years to orbit the Sun. That means half as many birthdays.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded shadow text-center">
+        <h4 class="text-xl font-bold mb-2">Jupiter</h4>
+        <p id="jupiter-age" class="text-indigo-600 font-semibold text-lg">—</p>
+        <p class="text-sm text-gray-600">A year on Jupiter is nearly 12 Earth years long. Your age drops big time here!</p>
+      </div>
+
+      <div class="bg-white p-6 rounded shadow text-center">
+        <h4 class="text-xl font-bold mb-2">Saturn</h4>
+        <p id="saturn-age" class="text-indigo-600 font-semibold text-lg">—</p>
+        <p class="text-sm text-gray-600">Saturn's year lasts 29.5 Earth years. You're still a child here!</p>
+      </div>
+
+      <div class="bg-white p-6 rounded shadow text-center">
+        <h4 class="text-xl font-bold mb-2">Uranus</h4>
+        <p id="uranus-age" class="text-indigo-600 font-semibold text-lg">—</p>
+        <p class="text-sm text-gray-600">Uranus takes 84 Earth years to orbit the Sun. One birthday = a lifetime.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded shadow text-center">
+        <h4 class="text-xl font-bold mb-2">Neptune</h4>
+        <p id="neptune-age" class="text-indigo-600 font-semibold text-lg">—</p>
+        <p class="text-sm text-gray-600">Neptune's year lasts 165 Earth years. You'd barely turn one!</p>
+      </div>
+
+      <div class="bg-white p-6 rounded shadow text-center">
+        <h4 class="text-xl font-bold mb-2">Pluto</h4>
+        <p id="pluto-age" class="text-indigo-600 font-semibold text-lg">—</p>
+        <p class="text-sm text-gray-600">Pluto takes almost 250 Earth years to go around the Sun. Eternal youth!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="bg-white border-t mt-10 p-6 text-center text-sm text-gray-600">
+    © 2025 Evan Piad 
+  </footer>
+
+  <!-- Script -->
+  <script>
+  const planetOrbitalPeriods = {
+    mercury: 0.24,
+    venus: 0.62,
+    earth: 1,
+    mars: 1.88,
+    jupiter: 11.86,
+    saturn: 29.46,
+    uranus: 84.01,
+    neptune: 164.8,
+    pluto: 248.6
+  };
+
+  function calculatePlanetAges() {
+    const earthAge = parseFloat(document.getElementById("earthAge").value);
+    if (isNaN(earthAge) || earthAge <= 0) {
+      alert("Please enter a valid age.");
+      return;
+    }
+
+    for (const planet in planetOrbitalPeriods) {
+      const age = (earthAge / planetOrbitalPeriods[planet]).toFixed(2);
+      const ageElement = document.getElementById(`${planet}-age`);
+      if (ageElement) {
+        ageElement.textContent = `${age} years old`;
+      }
+    }
+  }
+</script>
+</body>
+</html>
