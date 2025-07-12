@@ -63,7 +63,7 @@ nav a:hover::after {
   animation: fadeIn 1s ease-out forwards;
   opacity: 0; /* initial state before animation */
 }
-}
+
 
 nav a::after {
   content: "";
