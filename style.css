@@ -36,7 +36,7 @@ nav a::after {
   bottom: 0;
   width: 100%;
   height: 2px;
-  background-color: #4f46e5; /* Tailwind's indigo-600 */
+  background-color: #4f46e5; 
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -46,7 +46,6 @@ nav a:hover::after {
   transform: scaleX(1);
 }
 
-/* Fade-in animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -58,12 +57,22 @@ nav a:hover::after {
   }
 }
 
-/* Apply fade-in to anything with this class */
 .fade-in {
   animation: fadeIn 1s ease-out forwards;
-  opacity: 0; /* initial state before animation */
+  opacity: 0; 
 }
 
+nav a:visited {
+  color: inherit;
+}
+
+nav a {
+  color: white;
+}
+
+nav a:visited {
+  color: white;
+}
 
 nav a::after {
   content: "";
@@ -72,7 +81,7 @@ nav a::after {
   bottom: 0;
   width: 100%;
   height: 2px;
-  background-color: #4f46e5; /* Tailwind's indigo-600 */
+  background-color: #4f46e5; 
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -81,4 +90,3 @@ nav a::after {
 nav a:hover::after {
   transform: scaleX(1);
 }
-

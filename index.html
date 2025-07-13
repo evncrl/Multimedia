@@ -9,24 +9,20 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-black text-white">
 
-  <!-- HEADER -->
-  <header class="bg-white shadow-md sticky top-0 z-50">
+  <header class="bg-black shadow-md sticky top-0 z-50">
     <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
-      <h1 class="text-2xl font-bold text-indigo-600">EvnCrl</h1>
-      <nav class="space-x-4">
-        <a href="#projects" class="text-gray-700 hover:text-indigo-600">Projects</a>
-        <a href="after-effects.html" class="text-gray-700 hover:text-indigo-600">After Effects</a>
-        <a href="blender.html" class="text-gray-700 hover:text-indigo-600">Blender</a>
-        <a href="#about" class="text-gray-700 hover:text-indigo-600">About</a>
-        <a href="#contact" class="text-gray-700 hover:text-indigo-600">Contact</a>
+      <h1 class="text-2xl font-bold text-white">EvnCrl</h1>
+      <nav class="nav space-x-4">
+        <a href="#projects" class="text-white hover:text-indigo-300">Projects</a>
+        <a href="after-effects.html" class="text-white hover:text-indigo-300">After Effects</a>
+        <a href="blender.html" class="text-white hover:text-indigo-300">Blender</a>
       </nav>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="bg-indigo-100 py-20 text-center">
+  <section id="projects" class="bg-neutral-900 py-20 text-center text-white overflow-hidden fade-in">
     <div class="max-w-3xl mx-auto">
       <h2 class="text-4xl font-bold mb-4">Multimedia Projects</h2>
       <p class="text-lg">After Effects motion graphics & Blender animations — explore my latest creations</p>
@@ -34,17 +30,16 @@
     </div>
   </section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="max-w-5xl mx-auto p-6 flex flex-col items-center justify-center">
+  <!-- projects -->
+  <section class="max-w-7xl mx-auto p-6 flex flex-col items-center justify-center overflow-hidden fade-in">
     <h3 class="text-3xl font-semibold mb-6">Latest Projects</h3>
 
-    <div class="grid md:grid-cols-3 gap-6">
-      <!-- Project Card 1 -->
-      <div class="bg-white shadow rounded overflow-hidden fade-in" style="animation-delay: 0.2s;">
-      <div class="bg-white shadow rounded overflow-hidden">
+    <div class="grid md:grid-cols-2 gap-6">
+      <!-- project 1 -->
+      <div class="bg-neutral-900 shadow rounded overflow-hidden fade-in" style="animation-delay: 0.2s;">
         <div class="p-4">
           <h4 class="text-xl font-bold">Rotoscope</h4>
-          <p class="text-sm text-gray-600 mt-2">
+          <p class="text-sm text-gray-400 mt-2">
             Created in After Effects using motion typography and transitions.
           </p>
           <div class="mt-4 w-full aspect-video">
@@ -55,19 +50,18 @@
       </div>
 
 
-      <!-- Project Card 2 -->
-      <div class="bg-white shadow rounded overflow-hidden fade-in" style="animation-delay: 0.4s;">
+      <!-- project 2 -->
+      <div class="bg-neutral-900 shadow rounded overflow-hidden fade-in" style="animation-delay: 0.4s;">
         <img src="https://via.placeholder.com/600x340.png?text=Blender+Render" alt="Project 2" class="w-full">
         <div class="p-4">
           <h4 class="text-xl font-bold">Blender</h4>
-          <p class="text-sm text-gray-600 mt-2">3D environment designed and rendered in Blender with Eevee.</p>
+          <p class="text-sm text-gray-400 mt-2">3D environment designed and rendered in Blender with Eevee.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="max-w-3xl mx-auto py-16 px-6">
+  <section id="about" class="max-w-3xl mx-auto py-16 px-6 overflow-hidden fade-in">
     <h3 class="text-2xl font-semibold mb-4">About Me</h3>
     <p>I’m a second-year BSIT student at TUP-T. I use this blog to showcase my personal motion design projects,
       behind-the-scenes workflows,
@@ -75,8 +69,7 @@
     </p>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="bg-indigo-50 py-12 px-6">
+  <section id="contact" class="bg-neutral-900 py-12 px-6 fade-in">
     <div class="max-w-3xl mx-auto text-center">
       <h3 class="text-2xl font-semibold mb-4">Want to Collab or Say Hi?</h3>
       <p>Email me at <a href="mailto:yourname@email.com" class="text-indigo-600 underline">carlevan.piad05@email.com</a>
@@ -84,10 +77,22 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-white border-t mt-10 p-6 text-center text-sm text-gray-600">
+  <footer class="bg-neutral-900 border-t mt-10 p-6 text-center text-sm text-gray-600">
     © 2025 Evan Piad
   </footer>
+
+  <script>
+    const currentPage = location.pathname.split("/").pop(); 
+    const links = document.querySelectorAll("nav a");
+
+    links.forEach(link => {
+      const href = link.getAttribute("href");
+
+      if (href === currentPage || (currentPage === "" && href === "index.html")) {
+        link.classList.add("text-indigo-600", "font-semibold");
+      }
+    });
+  </script>
 
 </body>
 

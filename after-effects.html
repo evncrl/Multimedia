@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,22 +8,21 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-50 text-gray-800">
-  <!-- Header -->
-  <header class="bg-white shadow-md sticky top-0 z-50">
+
+<body class="bg-black text-white">
+
+  <header class="bg-black shadow-md sticky top-0 z-50">
     <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
-      <h1 class="text-2xl font-bold text-indigo-600">EvnCrl</h1>
-      <nav class="space-x-4">
+      <h1 class="text-2xl font-bold text-white">EvnCrl</h1>
+      <nav class="nav space-x-4">
         <a href="index.html" class="text-gray-700 hover:text-indigo-600">Projects</a>
-        <a href="after-effects.html" class="text-indigo-600 font-semibold">After Effects</a>
+        <a href="after-effects.html" class="text-gray-700 hover:text-indigo-600">After Effects</a>
         <a href="blender.html" class="text-gray-700 hover:text-indigo-600">Blender</a>
-        <a href="index.html#about" class="text-gray-700 hover:text-indigo-600">About</a>
-        <a href="index.html#contact" class="text-gray-700 hover:text-indigo-600">Contact</a>
       </nav>
     </div>
   </header>
 
-  <section class="bg-indigo-100 py-20 text-center">
+  <section class="bg-neutral-900 py-20 text-center fade-in">
     <div class="max-w-3xl mx-auto">
       <h2 class="text-4xl font-bold mb-4">Multimedia Projects</h2>
       <p class="text-lg">After Effects frame-by-frame animation graphics — explore my latest creations</p>
@@ -30,24 +30,47 @@
     </div>
   </section>
 
-  <!-- After Effects -->
-  <section class="max-w-7xl mx-auto p-6">
+  <section class="max-w-7xl mx-auto p-6 fade-in">
     <h2 class="text-3xl font-bold mb-6">After Effects Projects</h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      <!-- Project -->
-      <div class="bg-white shadow rounded overflow-hidden">
-        <img src="https://via.placeholder.com/600x340?text=AE+Video" alt="AE project" class="w-full">
-        <div class="p-4">
-          <h4 class="text-xl font-bold">Rotoscope Animation</h4>
-          <p class="text-sm text-gray-600 mt-2">Frame-by-frame rotoscope done in AE using stylized effects.</p>
+
+    <!-- Main flex layout -->
+    <div class="flex flex-col md:flex-row gap-6">
+
+      <!-- LEFT: Video card -->
+      <div class="bg-neutral-900 shadow rounded overflow-hidden w-full md:w-1/2 p-4">
+        <h4 class="text-xl font-bold mb-4">Pending Rotoscope Project</h4>
+        <p class="text-sm text-gray-400 mt-2">
+          LILI's FILM #2 - LISA Dance Performannce Video Edited in After Effects with motion typography and transitions.
+        </p>
+        <div class="aspect-video">
+          <iframe class="w-full h-full" src="https://www.youtube.com/embed/z1b1ujFdaVo" title="Rotoscope"
+            frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
-      <!-- Add more AE projects here -->
+
+      <!-- RIGHT: Description -->
+      <div class="bg-black shadow rounded w-full md:w-1/2 p-6">
+        <h4 class="text-2xl font-semibold mb-4">About This Project</h4>
+        <p class="text-sm text-gray-400 justify-between">
+          This After Effects rotoscope animation is inspired by LILI’s FILM #2 featuring Lisa of BLACKPINK. It involves
+          frame-by-frame masking, motion tracking, and animated typography synced to dance movements. This project
+          explores
+          kinetic rhythm and highlights smooth transitions using graph editors and blend modes.
+        </p>
+      </div>
+
     </div>
   </section>
 
-  <footer class="bg-white border-t mt-10 p-6 text-center text-sm text-gray-600">
-    © 2025 Evan Piad 
+
+  <section class="bg-neutral-900 py-12 px-6 fade-in">
+    <div class="max-w-5xl mx-auto">
+      <h3 class="text-3xl font-bold text-center mb-6">5-Second Highlights</h3>
+  </section>
+
+  <footer class="bg-neutral-900 border-t mt-10 p-6 text-center text-sm text-gray-600">
+    © 2025 Evan Piad
   </footer>
 </body>
+
 </html>
